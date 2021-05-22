@@ -27,3 +27,7 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
     - `getStaticProps` : to fetch necessary data for the each blog post (with a given `id`, for example)
   - Square brackets `[]` inside filename means dynamic routes in Next.js. You can catch all paths by adding three dots `...` inside the brackets. For example: `pages/posts/[...slugs].js`, this matches `/post/a`, but also `/post/a/b`, `/post/a/b/c` and so on.
   - To create 404 page, you can simply create `404.js` under `pages` directory like so, `pages/404.js`
+- API Routes
+  - We can build API endpoint by creating file inside `pages/api`
+  - You should not fetch an API Route from `getStaticProps` or `getStaticPaths`. Instead, write your server-side code directly in getStaticProps or getStaticPaths (or call a helper function).
+  - `getStaticProps` and `getStaticPaths` will only run on server-side, it won't even included in the JS bundle for browser.

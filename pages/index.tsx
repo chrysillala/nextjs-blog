@@ -20,7 +20,25 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({allPostsData, apiData, singleData}) {
+export default function Home({
+  allPostsData, apiData, singleData
+} : {
+  allPostsData: {
+    date: string
+    title: string
+    id: string
+  }[]
+  apiData: {
+    id: string
+    name: string
+    email: string
+  }[]
+  singleData: {
+    id: number
+    title: string
+    body: string
+  }
+}) {
   return (
     <div className="container">
       <Layout home>

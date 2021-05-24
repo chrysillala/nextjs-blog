@@ -71,7 +71,7 @@ export function getAllPostIds() {
 }
 
 // Get single post data
-export async function getPostData(id) {
+export async function getPostData(id: string) {
   const fullPath = path.join(postsDirectory, `${id}.md`); // get each post path
   const fileContents = fs.readFileSync(fullPath, 'utf8');
 

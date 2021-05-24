@@ -3,7 +3,8 @@ import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import Date from '../components/date';
 import utilStyles from '../styles/utils.module.css';
-import { getSortedPostsData, getEndpointData, getSingleData } from '../lib/posts';
+import { getSortedPostsData } from '../lib/posts';
+import { getEndpointData, getSingleData } from '../lib/endpoints';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -31,10 +32,19 @@ export default function Home({allPostsData, apiData, singleData}) {
             Go to{' '}
             <Link href="/posts/first-post"><a>First Post</a></Link>
           </p>
-          <p>Hello hello this is hello</p>
+          <h2>Hello World 🌏</h2>
+          <p>
+            You can find explanations about some ES6 features on this blog. I don't promise you this will be easy to understand but hopefully you can gain something and I can practice my writing here.
+          </p>
           <p>
             (This is a sample website - you’ll be building a site like this on{' '}
             <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          </p>
+        </section>
+        <section>
+          <h2>What is ES6?</h2>
+          <p>
+            ES6 or ECMAScript 6 was the second major revision to JavaScript, which enable us to write more with less code.
           </p>
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>

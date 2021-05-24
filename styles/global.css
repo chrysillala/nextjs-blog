@@ -12,6 +12,10 @@ body {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f7df1e;
+}
+
 a {
   color: #0070f3;
   text-decoration: none;

@@ -1,0 +1,12 @@
+.footer:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: -1rem;
+  width: 120%;
+  height: 5rem;
+  background: var(--light-blue);
+  transform: rotate(-5deg) scale(1.5);
+  transform-origin: top;
+  z-index: -1;
+}

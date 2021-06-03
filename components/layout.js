@@ -2,8 +2,10 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
+import Header from './header';
+import Footer from './footer';
 
-const name = 'ES6 Notes';
+export const name = 'ES6 Notes';
 export const siteTitle = 'ES6 Notes';
 
 export default function Layout({ children, home }) {
@@ -25,24 +27,7 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      { home ? (
-        <header className={`${utilStyles.container} ${styles.header}`}>
-          <h1 className={utilStyles.heading5Xl}>{ name }</h1>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
-        </header>
-      ) : (
-        <header className={`${styles.header} ${utilStyles.bgYellow} ${utilStyles.sticky}`}>
-          <div className={`${utilStyles.container}`}>
-            <p className={`${utilStyles.headingLg} ${utilStyles.fontBold}`}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{ name }</a>
-              </Link>
-            </p>
-          </div>
-        </header>
-      ) }
+      { home ? <Header home /> : <Header />}
       <main className={`${utilStyles.container} ${styles.main}`}>
         { children }
       </main>
@@ -53,9 +38,7 @@ export default function Layout({ children, home }) {
           </Link>
         </div>
       )}
-      <footer className={`${utilStyles.fontBold} ${utilStyles.textCenter}`}>
-        Created with Next.js
-      </footer>
+      <Footer />
     </div>
   )
 }

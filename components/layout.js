@@ -1,15 +1,15 @@
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
-const name = 'LL';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'ES6 Notes';
+export const siteTitle = 'ES6 Notes';
 
 export default function Layout({ children, home }) {
+
   return (
-    <div className={ styles.container }>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,49 +25,37 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={ styles.header }>
-        { home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpeg"
-              width={144}
-              height={144}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{ name }</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <Image
-                  priority
-                  src="/images/profile.jpeg"
-                  width={144}
-                  height={144}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
+      { home ? (
+        <header className={`${utilStyles.container} ${styles.header}`}>
+          <h1 className={utilStyles.heading5Xl}>{ name }</h1>
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </header>
+      ) : (
+        <header className={`${styles.header} ${utilStyles.bgYellow} ${utilStyles.sticky}`}>
+          <div className={`${utilStyles.container}`}>
+            <p className={`${utilStyles.headingLg} ${utilStyles.fontBold}`}>
               <Link href="/">
                 <a className={utilStyles.colorInherit}>{ name }</a>
               </Link>
-            </h2>
-          </>
-        ) }
-      </header>
-      <main>
+            </p>
+          </div>
+        </header>
+      ) }
+      <main className={`${utilStyles.container} ${styles.main}`}>
         { children }
       </main>
       { !home && (
-        <div className={utilStyles.backToHome}>
+        <div className={`${utilStyles.container} ${styles.backToHome}`}>
           <Link href="/">
             <a>← Back to home</a>
           </Link>
         </div>
       )}
+      <footer className={`${utilStyles.fontBold} ${utilStyles.textCenter}`}>
+        Created with Next.js
+      </footer>
     </div>
   )
 }

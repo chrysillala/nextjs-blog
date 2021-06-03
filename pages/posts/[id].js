@@ -3,6 +3,8 @@ import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 // Return a list of possible value for id
 export async function getStaticPaths() {
@@ -30,14 +32,31 @@ export async function getStaticProps({params}) {
 }
 
 export default function Post({postData}) {
+
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <div>
+          {postData.image_url && (
+            <>
+              <Image
+                src={postData.image_url}
+                alt={postData.title}
+                width={600}
+                height={400}
+                layout='responsive'
+              />
+              <p className={`${utilStyles.textLightGray} ${utilStyles.textSmall} ${utilStyles.textRight}`}>
+                Image taken from <Link href={postData.image_url}><a>Unsplash</a></Link>
+              </p>
+            </>
+          )}
+          <h1 className={utilStyles.heading2Xl}>{postData.title}</h1>
+        </div>
+        <div className={utilStyles.textGray}>
           <Date dateString={postData.date} /> <br />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />

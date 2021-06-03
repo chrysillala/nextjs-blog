@@ -1,13 +1,11 @@
 ---
-title: 'Async/Await'
+title: 'Async / Await'
 date: '2021-05-21'
 active: true
 image_url: 'https://images.unsplash.com/photo-1550669873-ac499be3d4aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
 ---
 
 Promise and Async/await is something that you will hear often and I thought this is one of scariest things in Javascript. Until I understand how it works. By writing this article, I don’t promise (no pun intended) this will be easy to understand but hopefully you might gain something here in understanding Asynchronous Javascript.
-
-I guess this will be my way to explain it and also as a way to learn in public.
 
 Now, let’s move on to the main topic!
 

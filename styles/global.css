@@ -1,3 +1,13 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --yellow: hsl(53, 93%, 54%);
+  --blue: hsl(212, 100%, 48%);
+  --light-blue: hsl(200, 100%, 95%);
+  --gray: hsl(0, 0%, 40%);
+  --light-gray: hsl(0, 0%, 68%);
+}
+
 html,
 body {
   padding: 0;
@@ -12,12 +22,12 @@ body {
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background-color: #f7df1e;
-}
+} */
 
 a {
-  color: #0070f3;
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -28,4 +38,43 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+footer {
+  padding: 1rem 0;
+}
+
+pre {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: .5rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+p > code {
+  background-color: var(--light-blue);
+  padding: .2rem;
+  border-radius: .3rem;
+}
+
+blockquote {
+  padding: 0 1rem;
+  margin: 0 1rem;
+  color: var(--gray);
+  border-left: .3rem solid var(--light-gray);
+}
+
+footer:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: -1rem;
+  width: 120%;
+  height: 5rem;
+  background: var(--light-blue);
+  transform: rotate(-5deg) scale(1.5);
+  transform-origin: top;
+  z-index: -1;
 }

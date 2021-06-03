@@ -1,3 +1,24 @@
+.container {
+  max-width: 55rem;
+  margin: 0 auto;
+}
+
+.heading5Xl {
+  font-size: 5rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
+.heading3Xl {
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -45,8 +66,77 @@
 
 .listItem {
   margin: 0 0 1.25rem;
+  display: grid;
+  grid-template-columns: minmax(100px, 25%) 1fr;
+  grid-gap: .5rem;
 }
 
-.lightText {
-  color: #666;
+.textGray {
+  color: var(--gray);
+}
+
+.textLightGray {
+  color: var(--light-gray);
+}
+
+.textBlue {
+  color: var(--blue);
+}
+
+.textYellow {
+  color: var(--yellow);
+}
+
+.textBlack {
+  color: var(--black);
+}
+
+.textWhite {
+  color: var(--white);
+}
+
+.bgYellow {
+  background-color: var(--yellow);
+}
+
+.text3Xl {
+  font-size: 3rem;
+}
+
+.text2Xl {
+  font-size: 2rem;
+}
+
+.textSmall {
+  font-size: .75rem;
+}
+
+.textLeft {
+  text-align: left;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.fontMedium {
+  font-weight: 500;
+}
+
+.fontBold {
+  font-weight: 700;
+}
+
+.fontExtraBold {
+  font-weight: 800;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 9;
 }

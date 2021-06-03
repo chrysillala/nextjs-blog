@@ -16,7 +16,7 @@ Both of them are block-scope variables, which means it is only available within 
 It is recommended to use `let` and `const` than using `var`, because when we use `let` and `const` will be hoisted to the top but they are not initialized (unlike `var` that has been initialized with the value of `undefined`) and this helps us to get better error message. Furthermore, we can't iniatialized those variables before we declare them. This is useful to make sure that our variables has been declared before we can use them and this is a good practice in programming.
 
 
-## Code Examples:
+### Code Examples:
 ```javascript
 // traditional
 var x = 5;

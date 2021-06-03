@@ -20,10 +20,11 @@ const sum = (a, b) => a + b;
 It's really awesome, right?
 The arrow function makes your code looks clean, more structured and more readable.
 
-When the body inside arrow function has more than one line, we need `{}`.
+When the body inside arrow function has more than one line, we need to wrap it inside `{}`.
 ```javascript
 const sum = (a, b) => {
-  return a + b;
+  const result = a + b;
+  return result;
 }
 ```
 
@@ -44,7 +45,7 @@ const square2 = arr2.map(item => item ** 2);
 console.log(square2);
 ```
 
-Although it is a powerful additon in ES6 but there are limitations that we need to understand to avoid errors that are difficult to track, such as when using `this` inside arrow function.
+Although it is a powerful addition in ES6 but there are limitations that we need to understand to avoid errors that are difficult to track, such as when using `this` inside arrow function.
 
 On the `car2` example, the result might be something that you are not looking for. So, we need to be careful when using arrow function. This happens because arrow function doesn’t have its own bindings to `this`, instead they *inherit from parent scope*, which is called **lexical scoping**.
 

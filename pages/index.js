@@ -40,8 +40,8 @@ export default function Home({allPostsData, apiData, singleData}) {
           <div>
             <h2 className={`${utilStyles.headingLg}`}>Hello World 🌏</h2>
             <p>
-              Welcome to ES6 Notes <br />
-              On this blog, you can find explanations about some ES6 features. I don't promise you this will be easy to understand but hopefully you can gain something and I can practice my writing here.
+              Welcome to ES6 Notes 📒<br />
+              On this blog, you can find explanations on some ES6 features.
             </p>
           </div>
         </section>

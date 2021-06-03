@@ -3,10 +3,10 @@
   position: fixed;
   left: 0;
   bottom: -1rem;
-  width: 120%;
+  width: 100%;
   height: 5rem;
   background: var(--light-blue);
-  transform: rotate(-5deg) scale(1.5);
+  transform: rotate(-5deg) scale(2);
   transform-origin: top;
   z-index: -1;
 }

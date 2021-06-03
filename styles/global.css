@@ -22,10 +22,6 @@ body {
   box-sizing: border-box;
 }
 
-/* body {
-  background-color: #f7df1e;
-} */
-
 a {
   color: var(--blue);
   text-decoration: none;
@@ -53,10 +49,15 @@ pre {
   word-break: break-word;
 }
 
+p {
+  line-height: 1.8;
+}
+
 p > code {
   background-color: var(--light-blue);
-  padding: .2rem;
+  padding: .1rem;
   border-radius: .3rem;
+  box-shadow: 1px 1px 1px;
 }
 
 blockquote {

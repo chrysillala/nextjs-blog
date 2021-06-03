@@ -9,9 +9,15 @@ export default function Header({home}) {
     {home ? (
       <header className={`${utilStyles.container} ${styles.header}`}>
         <h1 className={utilStyles.heading5Xl}>{ name }</h1>
-        <Link href="/about">
-          <a>About</a>
-        </Link>
+        <nav className={`${styles.nav}`}>
+          <ul>
+            <li>
+              <Link href="/about">
+                <a>About</a>
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
     ) : (
       <header className={`${styles.header} ${utilStyles.bgYellow} ${utilStyles.sticky}`}>

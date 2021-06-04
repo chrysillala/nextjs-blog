@@ -18,7 +18,7 @@ const darkmode = (options) => {
 console.log(darkmode(false)); // false
 ```
 
-We can also combine with optional chaining. In this example, we would like to check if the `lang` property inside the `post` Object is available, if it doesn't we will set the default `lang` to `en`
+We can also combine with [optional chaining](/posts/optional-chaining). In this example, we would like to check if the `lang` property inside the `post` Object is available, if it doesn't we will set the default `lang` to `en`
 ```javascript
 const post = {
   category: 'technology',
@@ -34,4 +34,4 @@ console.log(post?.details?.lang ?? 'en');
 
 It's really powerful and we have so much to explore.
 
-*Optional Chaining is a new feature in ES2020.*
+*Nullish Coalescing is a new feature in ES2020.*

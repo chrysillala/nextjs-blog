@@ -29,6 +29,6 @@ console.log('snack 2:', menu?.snacks?.two); // "snack 2:" "kopi kenangan"
 console.log(menu.countPrice?.()); // "total 57000"
 ```
 
-Optional chaining is usually combined with Nullish Coalescing. You can read further here.
+Optional chaining is usually combined with [Nullish Coalescing](/posts/nullish-coalescing).
 
 *Optional Chaining is a new feature in ES2020.*

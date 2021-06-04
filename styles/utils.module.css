@@ -123,6 +123,14 @@
   text-align: right;
 }
 
+.fontLight {
+  font-weight: 300;
+}
+
+.fontRegular {
+  font-weight: 400;
+}
+
 .fontMedium {
   font-weight: 500;
 }

@@ -48,7 +48,7 @@ export default function Home({allPostsData, apiData, singleData}) {
         <section>
           <h2 className={utilStyles.headingLg}>What is ES6?</h2>
           <p>
-            ES6 or ECMAScript 6 was the second major revision to JavaScript, which enable us to write more with less code.
+            ES6 or ECMAScript 6 was the second major revision to Javascript, which enable us to write less and do more. It has a lot of new features and new syntaxes to make your code looks more modern, more structured and more readable.
           </p>
         </section>
         <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -62,7 +62,7 @@ export default function Home({allPostsData, apiData, singleData}) {
                   <Date dateString={date} />
                 </small>
                 <Link href={`/posts/${id}`}>
-                  <a className={`${utilStyles.text2Xl} ${utilStyles.fontBold}`}>{title}</a>
+                  <a className={`${utilStyles.text2Xl}`}>{title}</a>
                 </Link>
               </li>
             ))}

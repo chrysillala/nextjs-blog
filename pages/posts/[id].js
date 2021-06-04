@@ -43,6 +43,7 @@ export default function Post({postData}) {
           {postData.image_url && (
             <>
               <Image
+                priority
                 src={postData.image_url}
                 alt={postData.title}
                 width={600}

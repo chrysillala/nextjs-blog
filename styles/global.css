@@ -39,9 +39,9 @@ footer {
   padding: 1rem 0;
 }
 
-pre {
-  background-color: var(--black);
-  color: var(--white);
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
   padding: 1rem;
   border-radius: .5rem;
   white-space: pre-wrap;

@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import Layout from '../../components/layout';
 import Date from '../../components/date';
 import utilStyles from '../../styles/utils.module.css';
@@ -5,6 +6,10 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/an-old-hope.css';
+import javascript from 'highlight.js/lib/languages/javascript';
+hljs.registerLanguage('javascript', javascript);
 
 // Return a list of possible value for id
 export async function getStaticPaths() {
@@ -32,6 +37,11 @@ export async function getStaticProps({params}) {
 }
 
 export default function Post({postData}) {
+
+  // need to init highlight.js when the page is rendered
+  useEffect(() => {
+    hljs.initHighlighting();
+  }, []);
 
   return (
     <Layout>

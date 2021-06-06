@@ -6,7 +6,8 @@ import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import hljs from 'highlight.js';
+
+import hljs from 'highlight.js/lib/core';
 import 'highlight.js/styles/an-old-hope.css';
 import javascript from 'highlight.js/lib/languages/javascript';
 hljs.registerLanguage('javascript', javascript);
